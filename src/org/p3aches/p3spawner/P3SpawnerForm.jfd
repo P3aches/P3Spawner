@@ -1,0 +1,467 @@
+JFDML JFormDesigner: "5.1.0.2.64" Java: "1.7.0_09" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp dialogPane::l::229:x}"
+			"$verticalGroup": "par l {seq l {comp dialogPane:::::x, space :::p}}"
+		} ) {
+			name: "this"
+			"$sizePolicy": 1
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "dialogPane"
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "restoreMethodPanel"
+					"border": new javax.swing.border.TitledBorder( new javax.swing.border.EtchedBorder( 1, null, null ), "Restore Method" )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "Restore Method"
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 1, false )
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 8
+						"y": 2
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "sumPotButton"
+						"text": "Sum. Pots"
+						"$buttonGroup": new FormReference( "restoreButtonGroup" )
+						"selected": true
+						"visible": false
+						addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "sumPotButtonStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 15
+						"height": 16
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "obeliskButton"
+						"text": "Obelisk"
+						"$buttonGroup": new FormReference( "restoreButtonGroup" )
+						"visible": false
+						addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "obeliskButtonStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 30
+						"height": 15
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 112
+					"y": 36
+					"height": 54
+					"width": 103
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "spawnTypePanel"
+					"border": new javax.swing.border.TitledBorder( new javax.swing.border.EtchedBorder( 1, null, null ), "Spawn Type" )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "Spawn Type"
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 1, false )
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 8
+						"y": 2
+						"height": 14
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "fruitBatButton"
+						"text": "Fruit Bat"
+						"$buttonGroup": new FormReference( "spawnButtonGroup" )
+						"selected": true
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "fruitBatButtonActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 5
+						"y": 15
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "redSpiderRaidoButton"
+						"text": "Red Spider"
+						"$buttonGroup": new FormReference( "spawnButtonGroup" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "redSpiderRaidoButtonActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 5
+						"y": 30
+						"height": 14
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 15
+					"y": 36
+					"width": 88
+					"height": 54
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "P3Spawner"
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 4, false )
+					"horizontalAlignment": 0
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 65
+					"y": 11
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "locationPanel"
+					"border": new javax.swing.border.TitledBorder( new javax.swing.border.EtchedBorder( 1, null, null ), "Location" )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "Location"
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 1, false )
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 69
+						"y": 2
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "cWarsButton"
+						"text": "Castle Wars"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cWarsButtonActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 15
+						"height": 13
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "edvillButton"
+						"text": "Edgeville"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "edvillButtonActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 30
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "catherbyButton"
+						"text": "Catherby"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "catherbyButtonActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 105
+						"y": 15
+						"height": 12
+						"width": 79
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "fallyEButton"
+						"text": "Fally E. Bank"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						"enabled": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 105
+						"y": 30
+						"height": 13
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "yanilleButton"
+						"text": "Yanille"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						"enabled": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 45
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "neitiznotButton"
+						"text": "Neitiznot"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						"enabled": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 105
+						"y": 45
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "lunarIslandButton"
+						"text": "Lunar Isle"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						"enabled": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 60
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "buthropeButton"
+						"text": "Buthrope"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						"enabled": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 105
+						"y": 60
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "taverleyButton"
+						"text": "Taverley"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						"enabled": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 75
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "alKharidButton"
+						"text": "Al Kharid"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						"enabled": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 105
+						"y": 75
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "mobArmiesButton"
+						"text": "Mob. Armies"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						"enabled": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 90
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "lletyaButton"
+						"text": "Lletya"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "lietyaButtonActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 105
+						"y": 90
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "shiloVilageButton"
+						"text": "Shilo Vilage"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						"enabled": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 105
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "canfisButton"
+						"text": "Canfis"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						"enabled": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 105
+						"y": 105
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "dranyorVillageButton"
+						"text": "Draynor Village"
+						"$buttonGroup": new FormReference( "locationGroup" )
+						"enabled": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 120
+						"height": 15
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 15
+					"y": 90
+					"width": 198
+					"height": 145
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "okButton"
+					"text": "Start"
+					"enabled": false
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "okButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 150
+					"y": 355
+					"height": 40
+					"width": 65
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "locationImagePanel"
+					"border": new javax.swing.border.TitledBorder( new javax.swing.border.EtchedBorder( 1, null, null ), "Location Image" )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "edvilMap"
+						"autoscrolls": true
+						"visible": false
+						addEvent( new FormEvent( "javax.swing.event.AncestorListener", "ancestorAdded", "edvilMapAncestorAdded", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 20
+						"y": 15
+						"width": 90
+						"height": 87
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "edvilObelisk"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 20
+						"y": 20
+						"width": 88
+						"height": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "cwarsMap"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 25
+						"y": 25
+						"width": 75
+						"height": 65
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "cwarsObelisk"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 20
+						"y": 20
+						"width": 90
+						"height": 75
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "catherbyMap"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 12
+						"y": 20
+						"width": 105
+						"height": 85
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "catherbyObelisk"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 15
+						"width": 110
+						"height": 90
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "lletyaMap"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 15
+						"y": 20
+						"width": 100
+						"height": 75
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 15
+					"y": 240
+					"height": 115
+					"width": 130
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "subAreaPanel"
+					"border": new javax.swing.border.TitledBorder( new javax.swing.border.EtchedBorder( 1, null, null ), "Sub-Area" )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+						"text": "Sub-Area"
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 2, false )
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 3
+						"y": 5
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "areaRadioButton1"
+						"text": "1"
+						"$buttonGroup": new FormReference( "areaGroup" )
+						"visible": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "areaRadioButton1ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 20
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "areaRadioButton2"
+						"text": "2"
+						"visible": false
+						"$buttonGroup": new FormReference( "areaGroup" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "areaRadioButton2ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 35
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "areaRadioButton3"
+						"text": "3"
+						"visible": false
+						"$buttonGroup": new FormReference( "areaGroup" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "areaRadioButton3ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 50
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "areaRadioButton4"
+						"text": "4"
+						"visible": false
+						"$buttonGroup": new FormReference( "areaGroup" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "areaRadioButton4ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 65
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "areaRadioButton5"
+						"text": "5"
+						"visible": false
+						"$buttonGroup": new FormReference( "areaGroup" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "areaRadioButton5ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 80
+						"height": 15
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "areaRadioButton6"
+						"text": "6"
+						"visible": false
+						"$buttonGroup": new FormReference( "areaGroup" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 95
+						"height": 15
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 150
+					"y": 240
+					"height": 115
+					"width": 65
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 0 )
+			"size": new java.awt.Dimension( 245, 435 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "spawnButtonGroup"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 120, 505 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "restoreButtonGroup"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 10, 503 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "areaGroup"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 561 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "locationGroup"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 617 )
+		} )
+	}
+}
