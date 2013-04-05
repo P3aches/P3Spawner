@@ -101,32 +101,7 @@ public class P3Spawner extends ActiveScript implements PaintListener, MouseListe
     double lastProfitSubmit = 0;
 
     public void onStop(){
-        try {
-            URL url;
-            if(PickItem.totalPrice>0){
-                url = new URL("http://www.p3ach.com/p3spawnerUpdater.php?username="+ Environment.getDisplayName().replace(" ", "-")
-                        + "&runtime=" + timer.getElapsed()/1000
-                        + "&online=" + 0
-                        +"&date="+String.valueOf(dateFormat2.format(date))
-                        + "&bananas=" + PickItem.totalBanCnt
-                        + "&oranges=" + PickItem.totalOrangCnt
-                        + "&papayas=" + PickItem.totalPapCnt
-                        + "&redEggs=" + PickItem.totalEggCnt
-                        + "&itemCnt=" + (PickItem.totalBanCnt+ PickItem.totalPapCnt+ PickItem.totalOrangCnt + PickItem.totalEggCnt)
-                        + "&profit=" + PickItem.totalPrice
-                        + "&location="+ String.valueOf(location+locationNumb));
-            }
-            else{
-                url = new URL("http://www.p3ach.com/p3spawnerUpdater.php?username="+ Environment.getDisplayName().replace(" ", "-")
-                        +"&online=" + 0 + "&date=" + String.valueOf(dateFormat2.format(date)));
-            }
-            URLConnection con = url.openConnection();
-            BufferedReader in = new BufferedReader(new InputStreamReader(
-                    con.getInputStream()));
-            in.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 
     public final void provide(final Node... jobs) {
@@ -254,40 +229,6 @@ public class P3Spawner extends ActiveScript implements PaintListener, MouseListe
         }
 
         if((timer.getElapsed()/1000-lastTimeSubmit)>fifteenMin){
-            try {
-                URL url;
-                if(PickItem.totalPrice>0){
-                    url = new URL("http://www.p3ach.com/p3spawnerUpdater.php?username="+ Environment.getDisplayName().replace(" ", "-")
-                            + "&runtime=" + ((timer.getElapsed()/1000) - lastTimeSubmit)
-                            + "&online=" + 1
-                            +"&date="+String.valueOf(dateFormat2.format(date))
-                            + "&bananas=" + (PickItem.totalBanCnt - lastBananasSubmit)
-                            + "&oranges=" + (PickItem.totalOrangCnt - lastOrangesSubmit)
-                            + "&papayas=" + (PickItem.totalPapCnt - lastPapayasSubmit)
-                            + "&redEggs=" + (PickItem.totalEggCnt - lastredEggsSubmit)
-                            + "&itemCnt=" + (PickItem.totalBanCnt+ PickItem.totalPapCnt+ PickItem.totalOrangCnt + PickItem.totalEggCnt - lastTotaItemsSubmit)
-                            + "&profit=" + (PickItem.totalPrice-lastProfitSubmit)
-                            + "&location="+ String.valueOf(location+locationNumb));
-
-                    lastBananasSubmit =  PickItem.totalBanCnt;
-                    lastOrangesSubmit =  PickItem.totalOrangCnt;
-                    lastPapayasSubmit =  PickItem.totalPapCnt;
-                    lastredEggsSubmit =  PickItem.totalEggCnt;
-                    lastProfitSubmit =  PickItem.totalPrice;
-                    lastTotaItemsSubmit =  (PickItem.totalBanCnt+ PickItem.totalPapCnt+ PickItem.totalOrangCnt + PickItem.totalEggCnt);
-                    lastTimeSubmit = timer.getElapsed()/1000;
-                }
-                else{
-                    url = new URL("http://www.p3ach.com/agilityUpdater.php?username="+ Environment.getDisplayName().replace(" ","-")
-                            +"&online=" + 0+ "&date=" + String.valueOf(dateFormat2.format(date)));
-                }
-                URLConnection con = url.openConnection();
-                BufferedReader in = new BufferedReader(new InputStreamReader(
-                        con.getInputStream()));
-                in.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
         return Random.nextInt(10, 50);
     }
