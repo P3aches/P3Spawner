@@ -105,28 +105,6 @@ public class CastScroll extends Node implements MessageListener{
             });
 
         }
-//        else if(Players.getLocal().getLocation().distance(castTile)>0){//Go back to tile
-//            if(!castTile.isOnScreen()){ //If tile not on screen click map
-//                castTile.clickOnMap();
-//                P3Util.waitFor(1,new P3Util.Cond() {  //Wait if not idle
-//                    @Override
-//                    public boolean accept() {
-//                        Task.sleep(200, 300);
-//                        return (-1 == Players.getLocal().getAnimation());
-//                    }
-//                });
-//            }
-//            else{ //if tile is on screen click tile
-//                castTile.click(true);
-//                P3Util.waitFor(1,new P3Util.Cond() {  //Wait if not idle
-//                    @Override
-//                    public boolean accept() {
-//                        Task.sleep(200, 300);
-//                        return (-1 == Players.getLocal().getAnimation());
-//                    }
-//                });
-//            }
-//        }
     }
 
     @Override
